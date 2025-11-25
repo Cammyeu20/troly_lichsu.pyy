@@ -4,6 +4,7 @@ from io import BytesIO
 import base64
 import streamlit.components.v1 as components
 from groq import Groq
+import os
 
 # ======================
 # ⚙️ CẤU HÌNH TRANG
@@ -19,7 +20,7 @@ if "audio_unlocked" not in st.session_state:
 # ======================
 # 🔧 KHỞI TẠO AI
 # ======================
-client = Groq(api_key=import os.getenv("GROQ_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def hoi_ai_lich_su(cau_hoi):
     """DÙNG AI trả lời mọi câu hỏi lịch sử Việt Nam."""
